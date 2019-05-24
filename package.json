@@ -12,10 +12,14 @@
     "url": "https://github.com/algolia/instant-search-demo/issues"
   },
   "scripts": {
-    "dev": "browser-sync start --server . --files 'css/*,img/*,js/*,index.html' --no-open"
+    "dev": "browser-sync start --server . --files 'css/*,img/*,js/*,index.html' --no-open",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "homepage": "https://github.com/algolia/instant-search-demo#readme",
   "dependencies": {
-    "browser-sync": "2.8.1"
-  }
+    "browser-sync": "2.26.0",
+    "snyk": "^1.167.0"
+  },
+  "snyk": true
 }
